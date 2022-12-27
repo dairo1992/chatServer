@@ -27,7 +27,7 @@ const crearUsuario = async (req, res = response) => {
 
         res.json({
             ok: true,
-            msg: usuario,
+            usuario: usuario,
             token
         });
     } catch (error) {
