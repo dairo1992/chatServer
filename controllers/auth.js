@@ -6,7 +6,7 @@ const { generarJWT } = require('../helpers/jwt');
 
 const crearUsuario = async (req, res = response) => {
     const user = req.body;
-
+    
     try {
         const existUsuario = await Usuario.findOne(user);
         if (existUsuario) {
@@ -54,7 +54,7 @@ const login = async (req, res = response) => {
         const token = await generarJWT(usuarioDB.id);
         res.json({
             ok: true,
-            msg: usuario,
+            usuario: usuarioDB,
             token
         });
 
@@ -74,7 +74,7 @@ const renewToken = async (req, res) => {
     res.json({
         ok: true,
         msg: usuarioDB.usuario,
-        token
+        token,
     });
     // res.json({
     //     ok: true,
