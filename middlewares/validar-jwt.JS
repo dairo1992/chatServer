@@ -3,7 +3,7 @@ const JWT = require('jsonwebtoken');
 const validarJWT = (req, res, next) => {
     //leer token
     const token = req.header('x-token');
-    if (!token) {
+    if(!token){
         return res.status(401).json({
             ok: false,
             msg: "no hay token"
@@ -22,6 +22,6 @@ const validarJWT = (req, res, next) => {
     }
 };
 
-module.exports =
-    validarJWT
-    ;
+module.exports = {
+    validarJWT                   
+};
