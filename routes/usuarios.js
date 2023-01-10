@@ -10,6 +10,6 @@ const router = Router();
 
 // 
 router.get('/', validarJWT, getusuarios);
-console.log(1);
+// console.log(1);
 
 module.exports = router;
