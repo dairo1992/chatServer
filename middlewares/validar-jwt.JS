@@ -1,4 +1,4 @@
-const JWT = require('jsonwebtoken');
+// const JWT = require('jsonwebtoken');
 
 const validarJWT = (req, res, next) => {
     //leer token
