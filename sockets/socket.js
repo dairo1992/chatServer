@@ -2,6 +2,8 @@ const { io } = require('../index');
 const { ComprovarJWT } = require('../helpers/jwt');
 const { usuarioConectado, usuarioDesConectado } = require('../controllers/socket');
 
+console.log('socket/socket.js');
+
 // Mensajes de Sockets
 io.on('connection', (client) => {
 
@@ -26,10 +28,5 @@ io.on('connection', (client) => {
     client.on('disconnect', () => {
         usuarioDesConectado(uid);
     });
-
-    client.on('connect', function () {
-        console.log("Client: Dairoooo");
-    });
-
 
 });
