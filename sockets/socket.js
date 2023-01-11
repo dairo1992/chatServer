@@ -2,6 +2,8 @@ const { io } = require('../index');
 const { ComprovarJWT } = require('../helpers/jwt');
 const { usuarioConectado, usuarioDesConectado } = require('../controllers/socket');
 
+console.log(io.on('connection', ()=> {}));
+
 // Mensajes de Sockets
 io.on('connection', (client) => {
 console.log('io.on("connection")');

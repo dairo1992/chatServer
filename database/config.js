@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+mongoose.set('strictQuery', true);
 const dbConnection = async() => {
     try {
         // console.log('ini config')
