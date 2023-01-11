@@ -6,7 +6,7 @@ console.log('socket/socket.js');
 
 // Mensajes de Sockets
 io.on('connection', (client) => {
-
+console.log('io.on("connection")');
     const token = client.handshake.headers['x-token'];
     const [valido, uid] = ComprovarJWT(token);
     // verifica autentificacion
