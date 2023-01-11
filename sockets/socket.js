@@ -28,6 +28,7 @@ io.on('connection', (client) => {
     });
 
     client.on('connect', function () {
+        console.log("Client: Dairoooo");
     });
 
 
