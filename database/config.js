@@ -5,7 +5,7 @@ const dbConnection = async() => {
         // console.log('ini config')
         await mongoose.connect( process.env.DB_CNN);
 
-        console.log('DB Online');
+        console.log('DB Online Internet');
         
     } catch (error) {
         console.log(error);
