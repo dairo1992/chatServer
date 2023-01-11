@@ -4,6 +4,8 @@ const { usuarioConectado, usuarioDesConectado } = require('../controllers/socket
 
 // Mensajes de Sockets
 io.on('connection', (client) => {
+    console.log('client connect...', client.id);
+
 
     const token = client.handshake.headers['x-token'];
     const [valido, uid] = ComprovarJWT(token);
